@@ -12,3 +12,5 @@ Members:
   * Jeffrey Rix (dropacid)
   * Soo-Hyun Yoo (yoos)
 
+Live at http://web.engr.oregonstate.edu/~yoos/cs361/.
+
