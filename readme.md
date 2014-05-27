@@ -6,9 +6,9 @@ For now, we plan to implement a basic HTML/PHP frontend to store audio and text
 snippets to a database.
 
 Members:
-  * Scott Boyle - boylscot@onid.orst.edu
-  * Samantha Midkiff - midkiffs@onid.oregonstate.edu
-  * Travis Nelson - travisLnelson@gmail.com
-  * Jeffrey Rix - rixempire@gmail.com
-  * Soo-Hyun Yoo - yoos117@gmail.com
+  * Scott Boyle ()
+  * Samantha Midkiff (samkiff)
+  * Travis Nelson (nelsotra)
+  * Jeffrey Rix (dropacid)
+  * Soo-Hyun Yoo (yoos)
 
