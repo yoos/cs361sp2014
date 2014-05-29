@@ -3,7 +3,8 @@
 <title>Saving Tongues</title>
 
 <link rel="stylesheet" type="text/css" href="style.css" />
-
+<script type="text/javascript" src="/jquery-2.1.1.min.js" ></script>	
+<script type="text/javascript" src="/application.js" ></script>			
 </head>
 
 <body>
@@ -15,10 +16,6 @@
 		<?php include_once('nav.php'); ?>
 	</div>
 
-	<div id="left">
-		<h3>Sidebar</h3>
-		<?php include_once('sidebar.php'); ?>
-	</div>
 
 	<div id="right">
 		<h3>Main</h3>
