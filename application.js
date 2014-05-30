@@ -7,8 +7,11 @@ function createAudio(){
 		.done(function(msg) {			
 			if(msg > 0)
 			{
+				$('#record-stop').show();
+				$('#record-start').hide();
 				$('#save-recording').show();		
-				$('#file-name-result').append('<h3>Recording will be save to file: ' + msg + '.mp4</h3>');
+				$('#file-name-current').append('<h3>Currently Recording to file: ' + msg + '.mp4</h3>');
+				$('#save-audio-info').append('<input type="hidden" value="'+ msg.trim() +'" name="audio_id">');
 			}
 			else
 			{				
@@ -32,20 +35,32 @@ $(function() {
 	
 	$('#save-recording').hide();
 	
+	$('#record-stop').hide();
 	
 	
 	
 	
 	
 	
-	
-	$('#record-submit').on("click", function(event) { 		
+	$('#record-start').on("click", function(event) { 		
   		event.stopPropagation();
   		event.preventDefault();  	
   		//$('#start-recording').hide();
   	
-  		$('#record-submit').val('Stop Recording');
+  		//$('#record-submit').val('Stop Recording');
   		createAudio();
 	});
+	
+	
+	$('#record-stop').on("click", function(event) { 		
+  		event.stopPropagation();
+  		event.preventDefault();  	
+  		$('#start-recording').hide();
+		
+		$('#file-name-result').append($('#file-name-current').text());
+  		
+	});
+	
+	
 	
 });
