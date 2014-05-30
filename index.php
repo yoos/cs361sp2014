@@ -18,7 +18,6 @@
 
 
 	<div id="right">
-		<h3>Main</h3>
 		<?php include_once('main.php'); ?>
 	</div>
 

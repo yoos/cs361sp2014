@@ -4,6 +4,31 @@ require_once('dbconfig.php');
 mysql_connect(DB_HOST, DB_USER, DB_PASS);
 @mysql_select_db(DB_NAME) or die( "Unable to select database");
 
+
+/*
+ * @brief Populate st_words table.
+ 
+ * @param audio_id: Audio entry index output by log_sentence.
+ * @param word: Word.
+ * @param start: Word start time.
+ * @param end: Word end time.
+ *
+ * @return: Word index if successful, -1 otherwise.
+ */
+function create_audio()
+{
+	$query = "insert into st_audio (text, title) values('','')";
+
+	if(mysql_query($query)) {
+		$id = mysql_insert_id();
+		return $id;
+	}
+	else {
+		return -1;
+	}	
+}
+
+
 /*
  * @brief 
  *
