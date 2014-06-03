@@ -6,7 +6,7 @@ For now, we plan to implement a basic HTML/PHP frontend to store audio and text
 snippets to a database.
 
 Members:
-  * Scott Boyle ()
+  * Scott Boyle (scottboyle)
   * Samantha Midkiff (samkiff)
   * Travis Nelson (nelsotra)
   * Jeffrey Rix (dropacid)
