@@ -38,7 +38,7 @@ function editAudio(){
 		if(msg > 0)
 		{
 			$('#file-name-result').empty();
-			$('#file-name-result').append('<h3>Sucessfully Saved information to file: 122.mp4</h3>');
+			$('#file-name-result').append('<h3>Successfully Saved information to file: 122.mp4</h3>');
 			$('#save-recording').hide();				
 		}		
 	})
