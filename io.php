@@ -6,14 +6,9 @@ mysql_connect(DB_HOST, DB_USER, DB_PASS);
 
 
 /*
- * @brief Populate st_words table.
- 
- * @param audio_id: Audio entry index output by log_sentence.
- * @param word: Word.
- * @param start: Word start time.
- * @param end: Word end time.
+ * @brief Insert row into st_audio table.
  *
- * @return: Word index if successful, -1 otherwise.
+ * @return: st_audio index if successful, -1 otherwise.
  */
 function create_audio()
 {
@@ -27,6 +22,34 @@ function create_audio()
 		return -1;
 	}	
 }
+
+
+/*
+ * @brief 
+ *
+ * updates information on audio transcript
+ *
+ * @param audio_id: Audio to save
+ * @param title: Audio title
+ * @param text: Audio transcript
+ * @return: 1 if successful, -1 otherwise.
+ */
+function edit_audio($audio_id, $title, $text)
+{
+	/* Make new entry in database */
+	$query = "update st_audio set title = '$title', text = '$text' where audio_id = '$audio_id'";
+
+	if(mysql_query($query)) {
+		return 1;
+	}
+	else {
+		return -1;
+	}
+
+}
+
+
+
 
 
 /*

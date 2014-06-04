@@ -15,9 +15,8 @@
 <ul class="nav navbar-nav">
 	<li class="active"><a href="index.php">Home</a></li>
 
-    <li><a href="#">Page 1</a></li>
-    <li><a href="#">Page 2</a></li>
-    <li class="last"><a href="#">Page 3</a></li>
+    <li><a href="index.php">Record</a></li>
+    <li class="last"><a href="#">Edit</a></li>
 </ul>
 
   </div><!-- /.container-fluid -->

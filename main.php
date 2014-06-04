@@ -20,15 +20,16 @@ require_once('io.php');
 	</form>
 </div>
 
+
+<div id="file-name-result">
+</div>
 <div id="save-recording">
-	<div id="file-name-result">
-	</div>
 	<form name="saveform" id="save-audio-info" method="post" action="" class="form-horizontal" role="form">
 		<!-- Text input-->
 		<div class="form-group">
 			<label class="col-lg-2 control-label" for="textinput">Title of Recording</label>
 			<div class="col-lg-10">
-				<input id="textinput" name="textinput" class="form-control input-md" type="text" />
+				<input id="audio_title" name="textinput" class="form-control input-md" type="text" />				
 			</div>
 		</div>
 
@@ -36,7 +37,7 @@ require_once('io.php');
 		<div class="form-group">
 			<label class="col-lg-2 control-label" for="textarea">Transcript</label>
 			<div class="col-lg-10">
-				<textarea class="form-control" rows="6" id="textarea" name="textarea"></textarea>
+				<textarea id="audio_transcript" class="form-control" rows="6" id="textarea" name="textarea"></textarea>				
 			</div>
 		</div>
 
