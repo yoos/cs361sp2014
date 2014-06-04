@@ -48,14 +48,12 @@ function editAudio(){
 
 }	
 
-
-
-
 $(function() {
 	
 	$('#save-recording').hide();	
 	$('#record-stop').hide();	
-	
+	$('#audio-player').hide();	
+
 	$('#record-start').on("click", function(event) { 		
   		event.stopPropagation();
   		event.preventDefault();  	
@@ -70,6 +68,7 @@ $(function() {
   		event.preventDefault();  	
   		$('#start-recording').hide();
 		$('#save-recording').show();		
+		$('#audio-player').show();	
 		$('#file-name-result').append('<h3>Recording Saved to file: 122.mp4</h3><h4>Use this form to update this recordings information</h4>');  		
 	});
 

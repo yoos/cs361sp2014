@@ -20,6 +20,11 @@ require_once('io.php');
 	</form>
 </div>
 
+<audio controls="controls" id="audio-player">
+  <source src="122.mp3" type="audio/mpeg">
+</audio>
+
+
 
 <div id="file-name-result">
 </div>
