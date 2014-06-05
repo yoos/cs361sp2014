@@ -35,7 +35,7 @@ require_once('io.php');
 
 		<!-- Text input-->
 		<div class="form-group">
-			<label class="col-lg-2 control-label" for="textinput">Start Time (in seconds)</label>
+			<label class="col-lg-2 control-label" for="textinput">End Time (in seconds)</label>
 			<div class="col-lg-10">
 				<input id="end_time" name="textinput" class="form-control input-md" type="text" />	
 			</div>
