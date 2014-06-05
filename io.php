@@ -4,7 +4,6 @@ require_once('dbconfig.php');
 mysql_connect(DB_HOST, DB_USER, DB_PASS);
 @mysql_select_db(DB_NAME) or die( "Unable to select database");
 
-
 /*
  * @brief Insert row into st_audio table.
  *
@@ -22,7 +21,6 @@ function create_audio()
 		return -1;
 	}	
 }
-
 
 /*
  * @brief 
@@ -47,10 +45,6 @@ function edit_audio($audio_id, $title, $text)
 	}
 
 }
-
-
-
-
 
 /*
  * @brief 
@@ -99,7 +93,7 @@ function tag_word($audio_id, $word, $start, $end)
 	$query = "insert into st_words values ('', '$word', '$audio_id', '$start', '$end')";
 
 	if(mysql_query($query)) {
-		echo "Tagged word '$word' in audio $audio_id at $start ending $end\n";
+		return 1;
 	}
 	else {
 		return -1;

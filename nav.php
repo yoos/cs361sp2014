@@ -16,7 +16,7 @@
 	<li class="active"><a href="index.php">Home</a></li>
 
     <li><a href="index.php">Record</a></li>
-    <li class="last"><a href="#">Edit</a></li>
+    <li class="last"><a href="addwordshome.php">Edit</a></li>
 </ul>
 
   </div><!-- /.container-fluid -->

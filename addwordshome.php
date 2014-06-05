@@ -7,7 +7,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>Saving Tongues</title>
 		<meta name="description" content="" />
-
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 		<script type="text/javascript" src="jquery-2.1.1.min.js" ></script>	
 		<script type="text/javascript" src="application.js" ></script>	
@@ -29,7 +28,7 @@
 
 
 	<div id="right">
-		<?php include_once('main.php'); ?>
+		<?php include_once('addwordsmain.php'); ?>
 	</div>
 
 	<div id="footer">
@@ -43,4 +42,3 @@
 
 </body>
 </html>
-
