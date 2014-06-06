@@ -97,7 +97,7 @@ $(function() {
   		$('#start-recording').hide();
 		$('#save-recording').show();		
 		$('#audio-player').show();	
-		$('#file-name-result').append('<h3>Recording Saved to file: 122.mp4</h3><h4>Use this form to update this recordings information</h4>');  		
+		$('#file-name-result').append('<h3>Recording Saved to file: '+ fakeAudioID +'.mp4</h3><h4>Use this form to update this recordings information</h4>');  		
 	});
 
 	$('#record-save').on("click", function(event) { 		
