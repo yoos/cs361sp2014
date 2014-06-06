@@ -1,46 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<!-- force latests IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>Saving Tongues</title>
-		<meta name="description" content="" />
-
-		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-		<script type="text/javascript" src="jquery-2.1.1.min.js" ></script>	
-		<script type="text/javascript" src="application.js" ></script>	
-		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>	
+<?php 
+include_once('header.php'); 
+?>
 
 
-	</head>
+
+<!-- Form Name -->
+<legend>List of Audio Recordings</legend>
 
 
-<body>
-<div style="margin-top:20px">
-			<div class="container">
-				<div class="panel panel-default" style="margin:0 auto;width:1000px">
-					
-				<div class="panel-body">
-	<div id="nav">
-		<?php include_once('nav.php'); ?>
-	</div> 
+
+<?php
+
+	$audio = get_audio_list();
+    
+	foreach ($audio as $a)
+	{
+		 echo '<h4>' . $a[2] . ' <a href="addwordshome.php?audio_id='. $a[0] .'"">Add Words</a></h4>';
+		 echo  $a[1] .'</br>';
+		 echo '<audio controls="controls">';
+		 echo '<source src="' . $audio[0][0] . '.mp3" type="audio/mpeg">';
+		 echo '</audio></br>';
+    	
+	}
+
+   
+?>
 
 
-	<div id="right">
-		<?php include_once('main.php'); ?>
-	</div>
 
-	<div id="footer">
-		<?php include_once('footer.php'); ?>
-	</div>
 
-				</div>
-			</div>
-		</div>
-	</div>
 
-</body>
-</html>
 
+<?php include_once('footer.php'); ?>
+
+	

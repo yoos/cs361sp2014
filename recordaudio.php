@@ -1,5 +1,13 @@
-<?php
-require_once('io.php');
+<?php 
+include_once('header.php'); 
+
+/*
+	Constant Variables
+*/
+
+
+
+
 ?>
 
 <fieldset>
@@ -12,7 +20,7 @@ require_once('io.php');
 	</div>
 	<form name="recordingform" method="post" action="" class="form-horizontal" role="form">
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sm-offset-1 col-sm-10">
 				<button type="submit" value="Start Recording" id="record-start" name="startbutton" class="btn btn-primary" method="post">Start Recording</button>
 				<button type="submit" value="Stop Recording" id="record-stop" name="stopbutton" class="btn btn-primary" method="post">Stop Recording</button>
 			</div>
@@ -48,7 +56,7 @@ require_once('io.php');
 
 		<!-- Save button -->
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sm-offset-1 col-sm-10">
 				<button id="record-save" name="savebutton" class="btn btn-success" method="post">Save</button>
 			</div>
 		</div>
@@ -57,3 +65,6 @@ require_once('io.php');
 
 </fieldset>
 
+<?php include_once('footer.php'); ?>
+
+	

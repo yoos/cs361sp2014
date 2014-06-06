@@ -4,6 +4,10 @@ require_once('dbconfig.php');
 mysql_connect(DB_HOST, DB_USER, DB_PASS);
 @mysql_select_db(DB_NAME) or die( "Unable to select database");
 
+
+
+
+
 /*
  * @brief Insert row into st_audio table.
  *
@@ -45,6 +49,59 @@ function edit_audio($audio_id, $title, $text)
 	}
 
 }
+
+
+/*
+ * @brief get information about audio file
+ *
+ * @param `audio_id`: audio_id.
+ * @return: information about audio file id, text, title
+ */
+function get_audio($audio_id)
+{
+	$query = "select audio_id, text, title
+		      from st_audio
+		      where audio_id='$audio_id'";
+	$result = mysql_query($query);
+	$num    = mysql_num_rows($result);
+
+	
+	$audio[0] = array(mysql_result($result, 0, 'audio_id'),
+			               mysql_result($result, 0, 'text'),
+			               mysql_result($result, 0, 'title'));
+	
+	return $audio;
+}
+
+
+/*
+ * @brief Get word instances for later playback.
+ *
+  * @return: Array of all instances of word by audio file index and timestamps.
+ */
+function get_audio_list()
+{
+	$query = "select audio_id, text, title
+		      from st_audio order by audio_id";
+	$result = mysql_query($query);
+	$num    = mysql_num_rows($result);
+
+	$i=0;  
+	$audio = array();
+	while ($i < $num) {
+		$audio[$i] = array(mysql_result($result, $i, 'audio_id'),
+			               mysql_result($result, $i, 'text'),
+			               mysql_result($result, $i, 'title'));
+		
+		$i++;
+	}
+
+	return $audio;
+}
+
+
+
+
 
 /*
  * @brief 
