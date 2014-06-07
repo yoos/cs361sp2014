@@ -18,17 +18,10 @@ include_once('header.php');
 		 echo '<h4>' . $a[2] . ' <a href="addwordshome.php?audio_id='. $a[0] .'"">Add Words</a></h4>';
 		 echo  $a[1] .'</br>';
 		 echo '<audio controls="controls">';
-		 echo '<source src="' . $audio[0][0] . '.mp3" type="audio/mpeg">';
+		 echo '<source src="' . $a[0]  . '.mp3" type="audio/mpeg">';
 		 echo '</audio></br>';
-    	
 	}
-
-   
 ?>
-
-
-
-
 
 
 <?php include_once('footer.php'); ?>
